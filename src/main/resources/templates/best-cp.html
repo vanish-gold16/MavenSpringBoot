@@ -1,10 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Best CP</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel ="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
 </head>
 <body>
+    <header th:insert="blocks/header :: header"></header>
 
+    <main class="container py-5">
+        <div class="content-body" dir="rtl" lang="ar">
+
+            <section id="content" class="mb-5">
+                <h2 class="mb-4">المحتوى</h2>
+
+                <article class="mb-5" id="typography">
+                    <h3 class="mb-3">النصوص</h3>
+
+                    <p class="display-6">العرض 6</p>
+                    <p class="lead">
+                        هذه قطعة إملائية متميزة، فهي مصممة لتكون بارزة من بين القطع الإملائية الأخرى.
+                    </p>
+
+                    <hr class="my-4">
+
+                    <blockquote class="blockquote">
+                        <p>إقتباس مبهر، موضوع في عنصر blockquote</p>
+                        <footer class="blockquote-footer">
+                            شخص مشهور في <cite title="عنوان المصدر">عنوان المصدر</cite>
+                        </footer>
+                    </blockquote>
+                </article>
+
+                <article class="mb-5" id="tables">
+                    <h3 class="mb-3">الجداول</h3>
+                    <div class="table-responsive">
+                        <table class="table table-striped align-middle">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>الاسم الاول</th>
+                                <th>الكنية</th>
+                                <th>الاسم المستعار</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td><bdo lang="en" dir="ltr">@mdo</bdo></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article class="mb-5" id="forms">
+                    <h3 class="mb-3">النماذج</h3>
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label" for="email">البريد الإلكتروني</label>
+                            <input class="form-control" type="email" id="email">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="pass">كلمة السر</label>
+                            <input class="form-control" type="password" id="pass">
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">إرسال</button>
+                        </div>
+                    </form>
+                </article>
+
+            </section>
+        </div>
+    </main>
+
+    <footer th:insert="blocks/footer :: footer"></footer>
 </body>
 </html>
