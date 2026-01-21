@@ -5,11 +5,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class BlogController {
+public class BestCPController {
 
-    @GetMapping("/blog")
-    public String blogMain(Model model){
-        return "blog-main";
+    @GetMapping("/best-cp")
+    public String bestCPMain(Model model){
+        return "best-cp";
     }
 
 }
