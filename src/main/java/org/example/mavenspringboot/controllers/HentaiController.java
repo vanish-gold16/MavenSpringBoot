@@ -16,6 +16,7 @@ public class HentaiController {
     @GetMapping("/hentai")
     public String hentai(Model model){
         Iterable<Post> posts = postRepository.findAll();
+        model.addAttribute("posts", posts);
         return "hentai";
     }
 }
