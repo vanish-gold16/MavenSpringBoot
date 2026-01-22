@@ -1,4 +1,10 @@
 package org.example.mavenspringboot.repo;
 
-public interface PostRepository {
+import org.example.mavenspringboot.models.Post;
+import org.springframework.data.repository.CrudRepository;
+
+public interface PostRepository extends CrudRepository<Post, Long> {
+
+
+
 }
