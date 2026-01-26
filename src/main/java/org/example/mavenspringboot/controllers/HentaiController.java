@@ -32,6 +32,6 @@ public class HentaiController {
                                 @RequestParam String full_text, Model model){
         Post post = new Post(title, details, full_text);
         postRepository.save(post);
-        return "";
+        return "redirect:/hentai";
     }
 }
