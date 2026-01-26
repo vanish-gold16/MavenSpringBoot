@@ -12,13 +12,36 @@ public class Post {
     @Column(name = "title")
     private String title;
 
+    @Column(name = "details")
+    private String details;
+
     @Column(name = "full_text")
     private String fullText;
 
     @Column(name = "views")
     private int views;
 
+    public Post(String title, String details, String fullText) {
+        this.title = title;
+        this.details = details;
+        this.fullText = fullText;
+    }
+
+    public Post(String title, String fullText) {
+        this.id = id;
+        this.title = title;
+        this.fullText = fullText;
+    }
+
     public Post() {
+    }
+
+    public String getDetails() {
+        return details;
+    }
+
+    public void setDetails(String details) {
+        this.details = details;
     }
 
     public Long getId() {
