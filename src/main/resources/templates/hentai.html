@@ -14,7 +14,7 @@
     <div th:each="el : ${posts}" class="alert about-info mt-2">
         <h3 th:text="${el.title}"></h3>
         <p th:text="${el.details}" >Description</p>
-        <p>Views: <span th:text="${el.views}"></span></p>
+        <p><b>Views</b> <span th:text="${el.views}"/></p>
         <a th:href="'/hentai/' + ${el.id}" class="btn btn-warning">Details</a>
     </div>
 </div>
