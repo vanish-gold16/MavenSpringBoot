@@ -13,6 +13,7 @@
     <h1>Blog</h1>
     <div th:each="el : ${posts}" class="alert about-info mt-2">
         <h3 th:text="${el.title}"></h3>
+        <p th:text="${el.details}">Description</p>
         <p th:text="${el.getViews()}">Views</p>
         <a th:href="'/hentai/' + ${el.id}">Details</a>
     </div>
