@@ -13,7 +13,7 @@
   <h1>Blog</h1>
   <div th:each="el : ${post}" class="alert about-info mt-2">
     <h3 th:text="${el.title}"></h3>
-    <p th:text="${el.full_text}">Full text</p>
+    <p th:text="${el.fullText}">Full text</p>
     <p th:text="${el.getViews()}">Views</p>
     <a th:href="'/hentai/' + ${el.id} + '/edit'" class="btn btn-warning">Redact</a>
     <a th:href="'/hentai/' + ${el.id} + 'remove'" class="btn btn-warning">Delete</a>
