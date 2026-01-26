@@ -43,6 +43,10 @@ public class HentaiController {
     @GetMapping("/hentai/{id}")
     public String hentaiDetails(@PathVariable(value = "id") long id,
                             Model model){
+        if(!postRepository.existsById(id)){
+            return "redirect:/hentai";
+        }
+
         Optional<Post> post = postRepository.findById(id);
         List<Post> res = new ArrayList<>();
         post.ifPresent(res::add);
