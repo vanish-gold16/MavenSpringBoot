@@ -19,4 +19,11 @@ public class HentaiController {
         model.addAttribute("posts", posts);
         return "hentai";
     }
+
+    @GetMapping("/hentai/add")
+    public String hentaiAdd(Model model){
+        Iterable<Post> posts = postRepository.findAll();
+        model.addAttribute("posts", posts);
+        return "hentai-add";
+    }
 }
