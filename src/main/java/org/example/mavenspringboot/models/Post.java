@@ -18,6 +18,9 @@ public class Post {
     @Column(name = "views")
     private int views;
 
+    public Post() {
+    }
+
     public Long getId() {
         return id;
     }
