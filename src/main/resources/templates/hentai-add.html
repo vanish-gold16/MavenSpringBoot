@@ -9,12 +9,12 @@
 
 <header th:replace="~{blocks/header :: header}"></header>
 
-<div class ="container mt-5">
+<div class ="container mt-5 mb-5">
   <h1>Add hentai text</h1>
   <form action="/hentai/add" method="post">
-    <input type="text" name="title" placeholder="Enter the title" class="form-control"/>
-    <input type="text" name="details" placeholder="Enter details of the post" class="form-control"/>
-    <textarea type="text" name="full_text" placeholder="Enter full text" class="form-control"></textarea>
+    <input type="text" name="title" placeholder="Enter the title" class="form-control"/><br>
+    <input type="text" name="details" placeholder="Enter details of the post" class="form-control"/><br>
+    <textarea type="text" name="full_text" placeholder="Enter full text" class="form-control"></textarea><br>
     <button type="submit" class="btn btn-success">Send</button>
   </form>
 </div>
