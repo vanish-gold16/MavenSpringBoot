@@ -1,4 +1,4 @@
-package org.example.mavenspringboot;
+package org.example.mavenspringboot.exceptions;
 
 public class PostNotFoundException extends RuntimeException {
 
