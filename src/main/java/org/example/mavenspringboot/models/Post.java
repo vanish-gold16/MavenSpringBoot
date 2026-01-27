@@ -27,11 +27,6 @@ public class Post {
         this.fullText = fullText;
     }
 
-    public Post(String title, String fullText) {
-        this.id = id;
-        this.title = title;
-        this.fullText = fullText;
-    }
 
     public Post() {
     }
