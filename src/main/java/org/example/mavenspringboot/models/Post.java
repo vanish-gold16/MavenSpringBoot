@@ -15,6 +15,7 @@ public class Post {
     @Column(name = "details")
     private String details;
 
+    @Lob
     @Column(name = "full_text", columnDefinition = "TEXT")
     private String fullText;
 
