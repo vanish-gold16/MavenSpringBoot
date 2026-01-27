@@ -15,7 +15,7 @@ public class Post {
     @Column(name = "details")
     private String details;
 
-    @Column(name = "full_text")
+    @Column(name = "full_text", columnDefinition = "TEXT")
     private String fullText;
 
     @Column(name = "views")
