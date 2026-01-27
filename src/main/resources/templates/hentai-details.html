@@ -16,10 +16,9 @@
     <p th:text="${el.fullText}">Full text</p>
     <p><b>Views</b> <span th:text="${el.views}"></span></p>
     <a th:href="'/hentai/' + ${el.id} + '/edit'" class="btn btn-warning">Redact</a>
-    <form th:action="'/blog/' + ${el.id} + '/remove'" method="post">
+    <form th:action="'/hentai/' + ${el.id} + '/remove'" method="post" class="d-inline-block">
       <button class="btn btn-warning" type="submit">Delete</button>
     </form>
-    <a th:href="'/hentai/' + ${el.id} + '/remove'" class="btn btn-warning">Delete</a>
   </div>
 </div>
 
