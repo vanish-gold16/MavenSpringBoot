@@ -70,4 +70,18 @@ public class HentaiController {
         return "hentai-edit";
     }
 
+    @PostMapping("/hentai/{id}/edit")
+    public String hentaiPostUpdate(@PathVariable(value = "id") long id,
+                                @RequestParam String title, @RequestParam String details,
+                                @RequestParam String full_text, Model model){
+        Post post = postRepository.findById(id).orElseThrow();
+        post.setTitle(title);
+        post.setDetails(details);
+        post.setFullText(full_text);
+
+        postRepository.save(post);
+
+        return "redirect:/hentai";
+    }
+
 }
