@@ -17,7 +17,7 @@
     <p><b>Views</b> <span th:text="${el.views}"></span></p>
     <a th:href="'/hentai/' + ${el.id} + '/edit'" class="btn btn-warning">Redact</a>
     <form th:action="'/hentai/' + ${el.id} + '/remove'" method="post" class="d-inline-block">
-      <button class="btn btn-warning" type="submit">Delete</button>
+      <button class="btn btn-danger" type="submit">Delete</button>
     </form>
   </div>
 </div>
