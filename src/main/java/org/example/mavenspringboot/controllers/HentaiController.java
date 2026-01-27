@@ -84,4 +84,13 @@ public class HentaiController {
         return "redirect:/hentai";
     }
 
+    @PostMapping("/hentai/{id}/remove")
+    public String hentaiPostDelete(@PathVariable(value = "id") long id, Model model){
+        Post post = postRepository.findById(id).orElseThrow();
+
+        postRepository.delete(post);
+
+        return "redirect:/hentai";
+    }
+
 }
